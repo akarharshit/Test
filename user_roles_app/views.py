@@ -67,7 +67,7 @@ def profile(request):
 
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
-from django.http import JsonResponses
+from django.http import JsonResponse
 
 @api_view(['POST'])
 @permission_classes([IsAuthenticated, IsAdminUser])
