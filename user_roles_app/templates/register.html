@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration</title>
+</head>
+<body>
+    <h2>User Registration</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label for="username">Username:</label>
+        <input type="text" name="username" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" required>
+        <br>
+        <label for="role">Role:</label>
+        <select name="role" required>
+            <option value="admin">Admin</option>
+            <option value="normal">Normal</option>
+        </select>
+        <br>
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>

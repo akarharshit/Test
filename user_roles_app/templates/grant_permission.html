@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grant Permission</title>
+</head>
+<body>
+    <h2>Grant Permission</h2>
+    {% if user.is_superuser %}
+        <p>Permission granted to a random normal user.</p>
+    {% else %}
+        <p>You don't have permission to grant permissions.</p>
+    {% endif %}
+    <a href="{% url 'profile' %}">Back to Profile</a>
+</body>
+</html>

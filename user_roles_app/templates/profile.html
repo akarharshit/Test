@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Profile</title>
+</head>
+<body>
+    <h2>User Profile</h2>
+    {% if profile.image %}
+        <img src="{{ profile.image.url }}" alt="User Image" width="200">
+    {% endif %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="image">Update Profile Image:</label>
+        <input type="file" name="image" accept="image/*">
+        <br>
+        <input type="submit" value="Update">
+    </form>
+    <br>
+    {% if user.is_superuser %}
+        <a href="{% url 'grant_permission' %}">Grant Permission</a>
+    {% endif %}
+</body>
+</html>
+
