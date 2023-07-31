@@ -10,3 +10,5 @@
      url : (http://localhost:8000/grant-permission/
      )
 8. postman collection is also attaching with this repository.
+9. screenshot is also attached for referance
+10. 
