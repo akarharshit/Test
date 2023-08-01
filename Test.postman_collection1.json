@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "03926c87-f996-49e6-8cae-b281440447b7",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25906008",
+		"_collection_link": "https://dark-space-368982.postman.co/workspace/Test~e2963e8c-9d73-4d66-b271-fb9a02be7b50/collection/25906008-03926c87-f996-49e6-8cae-b281440447b7?action=share&creator=25906008&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "gaurav",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Qwerty@123",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "admin",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/register/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register/normal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "priya",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Qwerty@123",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "normal",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/register/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Profile/normal",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjkwODY0OTE5LCJpYXQiOjE2OTA4NjEzMTksImp0aSI6IjQ3YjliM2NmZmJiMTQxM2ZiMzExZWI0NTE5NjA1YWUzIiwidXNlcl9pZCI6MTB9.HmCUHlBBrI474l_ebNXlBmNTsG0jD5cIt9vjQeFLI54",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/harsh/Downloads/5713016223.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/profile/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"profile",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profile/admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjkwODY0ODI5LCJpYXQiOjE2OTA4NjEyMjksImp0aSI6IjUyMzE5NGFlMDBjODQ1YTk5NzJhNmU4OTE2ZTliYTkzIiwidXNlcl9pZCI6OX0.66ZmzT-tpiF77hjA4ucqcIhBuEL4_xWFLV9U4NQHEZw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/harsh/Downloads/2928596330.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/profile/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"profile",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "grant_permission/normal user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjkwODY0ODI5LCJpYXQiOjE2OTA4NjEyMjksImp0aSI6IjUyMzE5NGFlMDBjODQ1YTk5NzJhNmU4OTE2ZTliYTkzIiwidXNlcl9pZCI6OX0.66ZmzT-tpiF77hjA4ucqcIhBuEL4_xWFLV9U4NQHEZw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "gaurav",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/grant_permission/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"grant_permission",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
